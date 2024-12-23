@@ -1,0 +1,5 @@
+# INSTALL DEPENDENCIES 
+# pip install -r requirements.txt
+
+spotipy #Or Spotify Web API
+pycaw #Or pyaudio
