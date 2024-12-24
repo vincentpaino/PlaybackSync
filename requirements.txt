@@ -1,4 +1,4 @@
-# INSTALL DEPENDENCIES 
+# INSTALL DEPENDENCIES (libraries) 
 # pip install -r requirements.txt
 
 spotipy #Or Spotify Web API

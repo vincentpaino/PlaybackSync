@@ -1,1 +1,3 @@
-s = 2
+import sys
+
+print(sys.path)
