@@ -1,2 +1,3 @@
 # Ignored files/folders by git
 .venv
+node_modules/

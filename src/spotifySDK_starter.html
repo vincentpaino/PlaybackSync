@@ -9,9 +9,9 @@
 
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script>
-        window.onSpotifyWebPlaybackSDKReady = () => {
+        window.onSpotifyWebPlaybackSDKReady = () => { //The onSpotifyWebPlaybackSDKReady method will be automatically called once the Web Playback SDK has successfully loaded.
             const token = 'BQCl9TTI-mwXY7uC-Yx25CqolVZWGq5wGnS2fLDobt7PUs2vwWfULonmw6ffUdX1YzKrjrNt_sshOGKfprGZvtUwzdpPbZupATsvRm2yfpVnNNaHR4EjiNK_9tlw2vPKUXVH7pniOL9DcY8xN9Ka2-p0TkxMgKeTLwc0shtJwHCVkrVHbzaJD3LiTImc7FWvhZqoHfjBnOGeMRV00dmkX-d0E74DNf7jkL2W'; // Replace this with the 1hr token on https://developer.spotify.com/documentation/web-playback-sdk/tutorials/getting-started
-            const player = new Spotify.Player({  //Spotify.Player Object
+            const player = new Spotify.Player({  
                 name: 'Web Playback SDK Quick Start Player',
                 getOAuthToken: cb => { cb(token); },
                 volume: 0.5
