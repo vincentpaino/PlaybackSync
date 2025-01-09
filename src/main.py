@@ -4,3 +4,6 @@ import time
 
 
 print(sys.path)
+
+def main():
+    

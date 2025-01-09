@@ -6,6 +6,7 @@ import os
 import base64
 from requests import post, get
 import json
+# import flask?
 
 # Load environment variables from a .env file into the OS environment.
 load_dotenv()
@@ -14,6 +15,7 @@ client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
 
 # This token extraction uses Client Credentials Flow, which is app-specific and does not provide access to user-specific features like playback control.
+# To authenticate a user, we'll need a redirect_uri
 def getToken():
     auth_string = client_id + ":" + client_secret
     # Convert the combined string into bytes and encode it in Base64 format.
@@ -48,6 +50,12 @@ def searchArtist(token, artist_name):
         return None
     
     return json_result[0]
+
+def getPlaybackState(token):
+    playback_url = "https://api.spotify.com/v1/me/player" # endpoint
+    headers = getAuthHeader(token)
+    # query
+    # result
 
 token = getToken()
 print(token)
